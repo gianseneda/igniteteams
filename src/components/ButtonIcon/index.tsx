@@ -3,10 +3,10 @@ import { MaterialIcons } from "@expo/vector-icons";
 
 import { Container, Icon, ButtonIconStyleProps } from "./styles";
 
-type Props = {
+interface Props extends TouchableOpacityProps {
   icon: keyof typeof MaterialIcons.glyphMap;
   type?: ButtonIconStyleProps;
-};
+}
 
 export function ButtonIcon({ icon, type = "PRIMARY", ...rest }: Props) {
   return (
